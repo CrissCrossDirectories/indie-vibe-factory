@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "IV: Spawn (Jest)",
+      "type": "shell",
+      "command": "./iv start ${input:projectName}",
+      "group": "build",
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "IV: Spawn (Vitest)",
+      "type": "shell",
+      "command": "./iv start ${input:projectName} --testing=vitest",
+      "group": "build",
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "IV: Continue (Verify)",
+      "type": "shell",
+      "command": "./iv continue ${input:projectName}",
+      "group": "test",
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "IV: List Projects",
+      "type": "shell",
+      "command": "./iv list",
+      "group": "none",
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "projectName",
+      "description": "Project name (lowercase, hyphens, numbers only)",
+      "type": "promptString",
+      "default": "my-project"
+    }
+  ]
+}

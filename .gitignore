@@ -1,0 +1,13 @@
+# Spawned projects (each has its own git repo)
+projects/
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# Environment
+.env
+.env.local
+.env.*.local
